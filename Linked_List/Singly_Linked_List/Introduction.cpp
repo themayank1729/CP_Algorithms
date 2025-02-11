@@ -24,7 +24,8 @@ int main()
 {
     vector<int> arr = {2, 5, 8, 7};
     // y is just a pointer variable that stores the address of the head node (the first node of the linked list in this case).
-    Node *head = new Node(arr[0], nullptr);
+    //Node *head = new Node(arr[0], nullptr);
+    Node *head = new Node(arr[0]);
     //   head -----> [ data: 2 | next: nullptr ]
     cout << head->data << " " << head->next << " \n";
 
@@ -37,12 +38,13 @@ int main()
 
     Node *newNode2 = new Node(arr[3]);
     newNode1->next = newNode2;
-  // Traversing the Linked List
+    // Traversing the Linked List
     Node *temp = head;
     while (temp != nullptr)
     {
         cout << "[ " << temp->data << " | " << temp->next << " ] ===>  ";
         temp = temp->next;
     }
+    
     ////   [ 2 | 0x5936ef88c700 ] ===>  [ 5 | 0x5936ef88c720 ] ===>  [ 8 | 0x5936ef88c740 ] ===>  [ 7 | 0 ] ===>
 }
